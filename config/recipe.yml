@@ -79,7 +79,7 @@ modules:
       - signing.sh
       - add docker and libvirt groups, make defaults
       - gnome extension installer (app indicators, dash to dock)
-
+      - rustup.sh
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
