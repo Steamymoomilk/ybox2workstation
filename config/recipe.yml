@@ -37,11 +37,18 @@ modules:
        - distrobox # More than toolbox.
        - prompt
        - powertop
+       - nvtop
+       - kdenlive 
+       - btop 
+       - mpv 
+       - kate
+       - rustup
+       
        #- psensor
        #- lm-sensor
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      #- firefox # default firefox removed in favor of flatpak
+      #- firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
     notify: true   # Send notification after install/uninstall is finished (true/false)
@@ -70,8 +77,8 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      #- add docker and libvirt groups, make defaults
-      #- gnome extension installer (app indicators, dash to dock)
+      - add docker and libvirt groups, make defaults
+      - gnome extension installer (app indicators, dash to dock)
 
 
   - type: bling # configure what to pull in from ublue-os/bling
